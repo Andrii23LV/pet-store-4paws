@@ -1,0 +1,79 @@
+.nav-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    border-bottom: 0.1rem solid rgba(0, 0, 0);
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 3.5rem;
+}
+
+.nav-wrap-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:#638561e8;
+    border-bottom: 0.1rem solid rgba(0, 0, 0);
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 3.5rem;
+}
+
+.nav-wrap:hover {
+    background-color: rgba(99, 99, 99, 0.4);
+}
+
+.nav-wrap-bg:hover {
+    background-color: #476045e8;
+}
+
+.nav-wrap .scrolled{
+    background-color: rgb(119, 160, 100);
+}
+
+.nav-logo {
+    height: 2rem; 
+    margin-right: 0.25rem;
+}
+
+.nav-title:hover {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #ffe000, #1bda14);
+}
+
+.nav-text {
+    width: auto; 
+    margin: 0;
+}
+
+.nav-title {
+    color:black;
+    margin: 0;
+    padding: 1rem;
+    align-items: center;
+    display: flex;
+}
+
+.nav-elements {
+    display: flex;
+    gap: 2rem;
+    padding-right: 2rem;
+    align-items: center;
+}
+
+.nav-element {
+    text-decoration: none;
+    color:black;
+    transition: 0.2s;
+    padding: 0 0.5rem;
+    margin: 0.75rem;
+    font-weight: 600;
+}
+
+.nav-element:hover {
+   color:  rgb(255, 255, 255);
+}

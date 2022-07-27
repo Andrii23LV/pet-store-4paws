@@ -1,0 +1,167 @@
+.loader {
+    text-align: center;
+}
+
+.newOrderSection {
+    background-image: url('https://wallpaperaccess.com/full/546539.jpg'); 
+    background-color: #cccccc; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    padding: 3rem 3rem 2rem 3rem;
+    box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.4);
+}
+
+.newOrder-wrap {
+    width: 60vw;
+    background-color: rgba(255, 255, 255, 0.399);
+    border-radius: 1.5rem;
+    box-shadow: 0 0.1rem 5rem rgba(105, 105, 105, 0.495);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.newOrderSection h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+.newOrder-btn-more {
+    display: flex;
+    margin: 0 auto;
+    background-color: transparent;
+    color: rgb(71, 128, 64);
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(71, 128, 64);
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.newOrder-btn-more:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.144);
+}
+
+.newOrder-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    height: 16rem;
+}
+
+.newOrder-form input {
+    width: 30vw;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgb(71, 128, 64);
+    padding: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.newOrder-btn {
+    color: black;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    background-color: rgb(88, 183, 76);
+    border: none;
+    transition: 0.3s;
+    margin-top: 1rem;
+}
+
+.newOrder-btn:hover {
+    background-color: rgb(89, 156, 69);
+    position: relative;
+    top: 0.1rem;
+    color: white;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------------------*/
+
+.findOrderSection {
+
+}
+
+.findOrder-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.findOrder-title h2 {
+    color: rgb(71, 128, 64);
+    font-size: 2rem;
+}
+
+.findOrder-title img {
+    width: 2.5rem;
+    padding-left: 0.5rem;
+}
+
+.order-info {
+    padding: 1rem;
+    padding-left: 5vw;
+    width: 80vw;
+    display: flex;
+    gap: 2rem;
+    margin: 5vh auto;
+}
+
+.order-info p {
+    padding: 0.5rem;
+}
+
+.order-info div {
+    border: 1px solid black;
+    width: 50%;
+    padding: 2rem;
+}
+
+.order-info p span{
+    padding-left: 0.5rem;
+    color:rgb(124, 124, 124);
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.search-form input {
+    width: 20vw;
+    margin: 0.75rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgb(71, 128, 64);
+    padding: 0.75rem;
+    font-size: 0.75rem;
+}
+
+.search-form button {
+    color: black;
+    border-radius: 0.75rem;
+    background-color: rgb(88, 183, 76);
+    border: none;
+    transition: 0.3s;
+    padding: 0.75rem 1rem;
+}
+.search-form button:hover {
+    background-color: rgb(89, 156, 69);
+    position: relative;
+    left: 0.1rem;
+    color: white;
+    cursor: pointer;
+}
+
+input:focus {
+    border: 0.15rem solid rgb(88, 183, 76);
+    outline: none;
+}
