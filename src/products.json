@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Collar Premium",
+        "status": "available",
+        "price": 120,
+        "img": "https://pngimg.com/uploads/dog_collar/dog_collar_PNG45.png",
+        "rate": 4.8,
+        "description": "High-quality leather collar",
+        "id": "1"
+    },
+    {
+        "name": "Collar Raffine",
+        "status": "available",
+        "price": 95,
+        "img": "https://pngimg.com/uploads/dog_collar/dog_collar_PNG26.png",
+        "rate": 4.5,
+        "description": "Natural bridle leather",
+        "id": "2"
+    },
+    {
+        "name": "Collar Simple",
+        "status": "available",
+        "price": 70,
+        "img": "https://pngimg.com/uploads/dog_collar/dog_collar_PNG37.png",
+        "rate": 4.6,
+        "description": "Dependable silicone collar",
+        "id": "3"
+    }
+]

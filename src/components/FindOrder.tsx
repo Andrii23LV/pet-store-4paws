@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { getOrder }  from '../api/ordersApi';
+import { getOrder }  from '../pages/OrderPage/ordersApi';
 import zoomImg from '../styles/images/zoom.png';
 
 export function FindOrder() {
@@ -13,6 +13,7 @@ export function FindOrder() {
     const  handleSearch = async () => {
         setIsLoading(true);
         const data = await getOrder(value);
+        console.log('get')
         setOrderTime(data.shipDate)
         setOrderStatus(data.status)
         setOrderQuantity(data.quantity)

@@ -1,8 +1,12 @@
 import {Route, Routes} from 'react-router-dom'
-import {MainPage} from './pages/MainPage'
-import {AboutPage} from './pages/AboutPage'
-import {OrderPage} from './pages/OrderPage'
+import {MainPage} from './pages/MainPage/MainPage'
+import {AboutPage} from './pages/AboutPage/AboutPage'
+import {OrderPage} from './pages/OrderPage/OrderPage'
 import {Navigation} from './components/Navigation'
+import {RegistrationForm} from './components/RegistrationForm'
+import {LogInForm} from './components/LogInForm'
+import {Footer} from './components/Footer'
+import AuthPage from './pages/AuthPage/AuthPage'
 
 function App() {
   return (
@@ -12,7 +16,11 @@ function App() {
         <Route path="/" element={ <MainPage /> } />
         <Route path="/about" element={ <AboutPage /> } />
         <Route path="/orders" element={ <OrderPage /> } />
+        <Route path="/account" element={ <AuthPage /> } />
+        <Route path="/account/registration" element={ <RegistrationForm /> } />
+          <Route path="/account/authorization" element={ <LogInForm /> } />
       </Routes>
+      <Footer />
     </>
   )
 }

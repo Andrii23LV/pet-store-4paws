@@ -1,0 +1,59 @@
+.accountSection {
+    padding: 5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    background-image: url('https://images.alphacoders.com/105/1054022.jpg');
+    background-position: top; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+.account-logout {
+    width: auto;
+    background-color: rgba(128, 128, 128, 0.605);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.account-logout button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.account-logout button:hover {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.account-form {
+    background-color: rgba(128, 128, 128, 0.605);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 30vw;
+    border: 2px solid black;
+    box-shadow: 0 0 3rem rgba(49, 149, 97, 0.305);
+}
+
+.account-form p span {
+    font-size: 1.5rem;
+    color: white;
+    padding-left: 0.5rem;
+} 
+
+.account-form img {
+    width: 20%;
+} 
+
+.form-name {
+    color: white;
+} 

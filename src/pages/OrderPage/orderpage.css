@@ -3,76 +3,86 @@
 }
 
 .newOrderSection {
-    background-image: url('https://wallpaperaccess.com/full/546539.jpg'); 
-    background-color: #cccccc; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    padding: 3rem 3rem 2rem 3rem;
-    box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.4);
+    background-image: url('https://wallpaperaccess.com/full/546539.jpg');
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem 3rem 2rem 3rem;
+    box-shadow: inset 0 -7px 9px -7px rgba(0, 0, 0, 0.4);
 }
 
-.newOrder-wrap {
-    width: 60vw;
-    background-color: rgba(255, 255, 255, 0.399);
-    border-radius: 1.5rem;
-    box-shadow: 0 0.1rem 5rem rgba(105, 105, 105, 0.495);
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    margin-top: 3rem;
-}
-
-.newOrderSection h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    padding: 2rem;
-}
-
-.newOrder-btn-more {
-    display: flex;
-    margin: 0 auto;
-    background-color: transparent;
-    color: rgb(71, 128, 64);
-    border-radius: 2rem;
-    border: 0.1rem solid rgb(71, 128, 64);
-    font-weight: bold;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.newOrder-btn-more:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.144);
-}
-
-.newOrder-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 0.5rem;
-    height: 16rem;
-}
-
-.newOrder-form input {
-    width: 30vw;
-    margin: 0.5rem;
+.orders-wrap {
+    background-color: rgba(255, 255, 255, 0.362);
     border-radius: 0.5rem;
-    border: 0.1rem solid rgb(71, 128, 64);
-    padding: 0.5rem;
-    font-size: 0.75rem;
+    width: 70%;
+    padding: 1rem;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
 }
 
-.newOrder-btn {
+.new-order {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    width: auto;
+    margin: 1rem auto;
+    min-width: 80%;
+    max-width: 80%;
+}
+
+.order-img {
+    width: 10vw;
+}
+
+.order-price-order {
+    font-size: 1rem;
+}
+
+.order-description {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.order-total {
+    padding: 1rem;
+    display: flex;
+}
+
+.remove-order {
+    margin-left: 1rem;
+    background-color: transparent;
+    border: none;
+}
+
+.remove-order:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.order-quantity {
+    padding-right: 2rem;
+}
+
+.buy-btn {
+    margin: 1rem auto;
+    width: 50%;
     color: black;
     border-radius: 0.75rem;
-    padding: 0.75rem;
     background-color: rgb(88, 183, 76);
     border: none;
     transition: 0.3s;
-    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.newOrder-btn:hover {
+.buy-btn:hover {
     background-color: rgb(89, 156, 69);
     position: relative;
     top: 0.1rem;
@@ -80,11 +90,13 @@
     cursor: pointer;
 }
 
+.total-price-order {
+    text-align: center;
+}
+
 /*--------------------------------------------------------------------*/
 
-.findOrderSection {
-
-}
+.findOrderSection {}
 
 .findOrder-title {
     display: flex;
@@ -106,7 +118,7 @@
 .order-info {
     padding: 1rem;
     padding-left: 5vw;
-    width: 80vw;
+    width: auto;
     display: flex;
     gap: 2rem;
     margin: 5vh auto;
@@ -122,9 +134,9 @@
     padding: 2rem;
 }
 
-.order-info p span{
+.order-info p span {
     padding-left: 0.5rem;
-    color:rgb(124, 124, 124);
+    color: rgb(124, 124, 124);
 }
 
 .search-form {
@@ -153,10 +165,11 @@
     transition: 0.3s;
     padding: 0.75rem 1rem;
 }
+
 .search-form button:hover {
     background-color: rgb(89, 156, 69);
     position: relative;
-    left: 0.1rem;
+    top: 0.1rem;
     color: white;
     cursor: pointer;
 }
