@@ -2,7 +2,6 @@
     background: #5A3F37;
     background: linear-gradient(to right, #2C7744, #5A3F37);
     padding: 4.5rem 2rem;
-    height: 100vh;
 }
 
 #form-register {
@@ -69,6 +68,7 @@
     margin: 1rem;
     border-radius: 0.5rem;
     border: 2px solid rgb(13, 174, 13);
+    box-sizing: content-box;
 }
 
 #form-register input:focus {

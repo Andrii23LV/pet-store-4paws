@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import setCurrentUser from "./setCurrentUser";
 import setOrders from "./setOrders";
+import setWishList from "./setWishList";
 
 export default configureStore({
   reducer: {
@@ -12,7 +13,10 @@ export default configureStore({
     premiumQuantity: setOrders,
     raffineQuantity: setOrders,
     simpleQuantity: setOrders,
-    collarSum: setOrders
+    collarSum: setOrders,
+    wishPremium: setWishList,
+    wishRaffine: setWishList,
+    wishSimple: setWishList,
   }
 });
 

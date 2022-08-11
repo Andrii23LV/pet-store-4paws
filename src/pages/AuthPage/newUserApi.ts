@@ -10,7 +10,7 @@ export const newUserApi = async (data:any = {}) => {
         "password": data.password,
         "phone": data.phone,
         "userStatus": 1
-        }, {headers:{"Content-Type" : "application/json"}})
+        })
         console.log(response.data);
     } 
     catch (e:any) {

@@ -3,10 +3,16 @@
     display: flex;
     flex-direction: column;
     gap: 5vh;
-    background-image: url('https://images.alphacoders.com/105/1054022.jpg');
-    background-position: top; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    background-image: url('https://s1.1zoom.me/b5050/155/Dogs_Amstaff_Snout_Glance_Black_background_595956_1920x1200.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+.account-details {
+    display: flex;
+    gap: 5vw;
 }
 
 .account-logout {
@@ -17,6 +23,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 75vw;
 }
 
 .account-logout button {
@@ -41,19 +48,90 @@
     gap: 2vh;
     width: 30vw;
     border: 2px solid black;
-    box-shadow: 0 0 3rem rgba(49, 149, 97, 0.305);
 }
 
 .account-form p span {
     font-size: 1.5rem;
     color: white;
     padding-left: 0.5rem;
-} 
+}
 
 .account-form img {
     width: 20%;
-} 
+}
 
 .form-name {
     color: white;
-} 
+}
+
+
+/* wish ---------------------------------------------*/
+
+
+.wishSection {
+    width: auto;
+    background-color: rgba(128, 128, 128, 0.605);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    padding-top: 0;
+}
+
+.wishSection h2 {
+    text-align: center;
+    color: white;
+}
+
+.wish-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.wish-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7vw;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.wish-description {
+    display: flex;
+    gap: 2vw;
+}
+
+.wish-btns {
+    display: flex;
+    gap: 2vw;
+}
+
+.remove-wish {
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+.remove-wish:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.add-cart-wish {
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+.add-cart-wish:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: green;
+}

@@ -1,5 +1,6 @@
 import products from '../products.json'
 import AddToCartButton from './AddToCartButton'
+import { SaveIcon } from './SaveIcon'
 export function Products() {
     return (
      <div className='sectionProducts'>
@@ -9,6 +10,7 @@ export function Products() {
             products.map((product) => {
                 return (
                     <div className='product-card' key={ product.id } id={ product.id }>
+                        <SaveIcon />
                         <img src={product.img} className='card-img'></img>
                         <div className='card-description'>
                             <h3 className='card-title'>{ product.name }</h3>

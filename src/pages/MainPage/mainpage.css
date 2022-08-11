@@ -93,6 +93,7 @@
 
 .product-card img {
     transition: 0.5s;
+    padding-top: 0;
 }
 
 .product-card img:hover {
@@ -113,5 +114,32 @@
 
 .card-cart-btn:hover {
     background-color: rgb(241, 241, 79);
+    cursor: pointer;
+}
+
+.save-btn {
+    width: 12%;
+    margin: 4px;
+    background-color: transparent;
+    border: none;
+}
+
+.save-icon:focus {
+    fill: red;
+}
+
+.save-icon {
+    width: 100%;
+    fill: #cccccc;
+}
+
+.save-icon-red {
+    width: 100%;
+    fill: red;
+    cursor: pointer;
+}
+
+.save-icon:hover {
+    fill: rgb(197, 95, 95);
     cursor: pointer;
 }
