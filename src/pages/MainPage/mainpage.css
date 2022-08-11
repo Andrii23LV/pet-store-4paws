@@ -1,12 +1,12 @@
 .header-wrap {
-    background-image: url('https://images5.alphacoders.com/466/466168.jpg'); 
-    background-color: #cccccc; 
-    width: 100%; 
+    background-image: url('https://images5.alphacoders.com/466/466168.jpg');
+    background-color: #cccccc;
+    width: 100%;
     height: 25rem;
-    background-position: top; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    box-shadow: inset 0 -7px 9px -7px rgba(0,0,0,0.4);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 -7px 20px -7px rgba(0, 0, 0, 0.4);
 }
 
 .header-title-title {
@@ -23,7 +23,12 @@
     padding: 0 6rem 4rem 0;
     font-size: 2.5em;
     font-weight: 300;
-    margin:0;
+    margin: 0;
+}
+
+.sectionProducts {
+    background: linear-gradient(180deg, hsla(120, 35%, 32%, 1) 0%, rgb(27, 46, 32) 100%);
+
 }
 
 .product-title {
@@ -31,40 +36,42 @@
     padding-top: 2.5rem;
     font-size: 2.5rem;
     font-weight: 300;
+    color: white;
 }
 
 .product-cards {
     display: flex;
     gap: 5vw;
     justify-content: center;
-    margin: 3rem 0;
+    margin: 3rem 0 0 0;
+    padding-bottom: 3rem;
 }
 
 .product-card {
-    width: 25vw;
-    border: 2px solid #93a693;
-    border-radius: 0.5rem;
+    width: 25%;
+    border-radius: 0.7rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     transition: 0.5s;
     background-color: white;
     justify-content: space-between;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.398);
 }
 
 .card-description {
-    background-color: #93a693;
+    padding: 2vw;
+    background-color: rgb(226, 230, 166);
+    color: rgb(0, 0, 0);
     width: 100%;
-    padding: 1rem;
-    box-sizing:border-box;
-    border-radius: 0.5rem;
-    margin-left: 0.5rem;
+    box-sizing: border-box;
 }
 
 .card-img {
     width: 90%;
     margin: 0 auto;
     padding: 1rem 0;
+    height: 38%;
 }
 
 .card-section-price {
@@ -75,12 +82,21 @@
 }
 
 .card-price {
-    color: rgb(38, 52, 40);
-    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-size: 1.75rem;
 }
 
 .product-card:hover {
     box-shadow: 0 1rem 2.5rem rgba(128, 200, 121, 0.634);
+    transform: scale(1.05);
+}
+
+.product-card img {
+    transition: 0.5s;
+}
+
+.product-card img:hover {
+    transform: scale(1.25);
 }
 
 .card-cart-btn {
@@ -99,4 +115,3 @@
     background-color: rgb(241, 241, 79);
     cursor: pointer;
 }
-

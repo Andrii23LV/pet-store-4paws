@@ -29,10 +29,14 @@
 .footer-links a {
     text-decoration: none;
     color: rgb(147, 147, 147);
+    font-size: 0.7rem;
 }
 
 .footer-links a:hover {
-    color: black;
+    color: white;
+    font-weight: 400;
+    position: relative;
+    left: 2px;
 }
 
 .footer-links img {
@@ -51,6 +55,7 @@
 .footer-wrap h1 {
     text-align: center;
     padding: 2%;
+    padding-top: 0;
     text-decoration: underline;
     font-size: 2.5rem;
     color: rgb(93, 93, 93);

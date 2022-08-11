@@ -1,6 +1,6 @@
 .logInSection {
-    background: #141E30; 
-    background: linear-gradient(to right, #335479, #141E30); 
+    background: #141E30;
+    background: linear-gradient(to right, #335479, #141E30);
     padding: 4.5rem 2rem;
     height: 90vh;
 }
@@ -23,7 +23,7 @@
     border: 2px solid white;
 }
 
-.form-logIn-wrap h2{
+.form-logIn-wrap h2 {
     font-size: 5.5rem;
     display: flex;
     width: 50%;
@@ -32,9 +32,9 @@
     justify-content: center;
     align-items: center;
     background-image: url('https://wallsbazar.com/wp-content/uploads/2022/03/Wallpapers-Husky.jpg');
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     color: white;
@@ -44,7 +44,7 @@
 #form-logIn input {
     margin: 1rem;
     padding: 0.5rem;
-    transition: 0.4s;
+    transition: 0.1s;
     height: 1.4rem;
     border: none;
     border-bottom: 1px solid black;
@@ -69,7 +69,12 @@
 
 #form-logIn input:hover {
     margin: 1rem;
-    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(17, 114, 250);
+}
+
+#form-logIn input:focus {
+    margin: 1rem;
     border-radius: 0.5rem;
     border: 2px solid rgb(17, 114, 250);
 }

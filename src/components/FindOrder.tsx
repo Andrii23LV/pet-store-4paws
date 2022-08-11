@@ -42,9 +42,9 @@ export function FindOrder() {
                 </div>
                 <div>
                     <h2>Our delivery</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                        Voluptas ex quidem fugit placeat, aperiam natus praesentium. Iusto consequatur, 
-                        minima.
+                    <p>We cooperate with many leading companies that provide goods delivery services. 
+                        Therefore, speed and quality are guaranteed. 
+                        If you have any questions about your order. Call our hotline numbers.
                         </p>
                 </div>
             </div>

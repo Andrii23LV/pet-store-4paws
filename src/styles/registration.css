@@ -73,7 +73,6 @@
 
 #form-register input:focus {
     margin: 1rem;
-    padding: 1rem;
     border-radius: 0.5rem;
     border: 2px solid rgb(13, 174, 13);
 }

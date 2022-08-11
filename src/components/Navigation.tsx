@@ -22,7 +22,7 @@ export function Navigation() {
       </div>
       <span className='nav-elements'>
         <Link to="/" className="nav-element">Products</Link>
-        <Link to="/about" className="nav-element">About</Link>
+        <Link to="/about" className="nav-element">About us</Link>
         <Link to="/orders" className="nav-element">Orders{collarSum > 0 ? <span id='orders-num'>{collarSum}</span> : ''}</Link>
         <Link to="/account" className="nav-element">{isLogged ? username : 'Account'}</Link>
       </span>

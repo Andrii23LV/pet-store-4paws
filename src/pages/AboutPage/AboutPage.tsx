@@ -1,7 +1,21 @@
-import React from 'react'
+import { AboutInfo } from "../../components/AboutInfo"
+import GoogleMaps from "../../components/GoogleMaps"
 
 export function AboutPage() {
   return (
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At iusto minus molestiae non quibusdam quod reprehenderit velit. Eius enim error harum, minus natus non obcaecati perferendis praesentium qui quisquam quos repudiandae rerum sed ullam, voluptate! Ad commodi dignissimos dolor earum eum illum molestias porro possimus rem! Consequuntur error minima mollitia?</div>
+    <>
+      <AboutInfo />
+      <section className="about-map">
+        <div className="map-wrap">
+          <h1>You could find us on map below</h1>
+          <GoogleMaps />
+        </div>
+        <div className="map-address-description">
+          <h2>Our address:</h2>
+          <p>Lviv oblast, Lviv, Dzherelna Street <br/> Ukraine 79019</p>
+          <p>Forum Lviv</p>
+        </div>
+      </section>
+    </>
   )
 }

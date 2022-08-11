@@ -1,4 +1,4 @@
-import '../styles/login.css'
+import '../pages/AuthPage/login.css'
 import {Link} from 'react-router-dom'
 import { BackButton } from './BackButton'
 import axios from 'axios';
