@@ -1,16 +1,18 @@
 import {Link} from 'react-router-dom'
 import { useSelector } from "react-redux";
-import './authorization.css'
+import './authorization.css';  
+import './registration.css';  
+import './login.css';  
 import { UserAccount } from '../../components/UserAccount'
 
 function AuthPage() {
-  const { isLogged } = useSelector((state: any = {}) => state.username);
+  const { isLogged } = useSelector((state: any = {}) => state.id);
   return (
     <>
       { !isLogged ?
         <section className='auth-links-to'>
           <Link to="/account/registration" className='registration-link'>Registartion &#8599;</Link>
-          <Link to="/account/authorization" className='authorization-link'>Authorization &#8599;</Link> 
+          <Link to="/account/login" className='login-link'>Login &#8599;</Link> 
         </section>
         : <UserAccount />}
     </>

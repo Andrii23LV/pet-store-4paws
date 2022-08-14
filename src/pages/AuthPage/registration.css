@@ -20,6 +20,7 @@
     width: 50vw;
     border-radius: 0.5rem;
     border: 2px solid white;
+    max-width: 50vw;
 }
 
 .form-register-wrap h2 {
@@ -40,16 +41,30 @@
 }
 
 
-#form-register input {
+.reg-input {
     margin: 0.6rem 1rem;
     padding: 0.5rem;
     transition: 0.2s;
     height: 1.4rem;
     border: none;
     border-bottom: 1px solid black;
+    position: relative;
 }
 
-#form-register button {
+.reg-input:hover {
+    border-radius: 0.2rem;
+    border: 1px solid rgb(13, 174, 13);
+    box-sizing: content-box;
+    max-height: 1.4rem;
+}
+
+.reg-input:focus {
+    border-radius: 0.5rem;
+    border: 2px solid rgb(13, 174, 13);
+    max-height: 1.4rem;
+}
+
+.btn-register {
     margin: 1rem;
     padding: 1rem;
     font-size: 1.2rem;
@@ -59,22 +74,9 @@
     border: none;
 }
 
-#form-register button:hover {
+.btn-register:hover {
     background-color: rgb(6, 77, 6);
     cursor: pointer;
-}
-
-#form-register input:hover {
-    margin: 1rem;
-    border-radius: 0.5rem;
-    border: 2px solid rgb(13, 174, 13);
-    box-sizing: content-box;
-}
-
-#form-register input:focus {
-    margin: 1rem;
-    border-radius: 0.5rem;
-    border: 2px solid rgb(13, 174, 13);
 }
 
 .error-auth {
@@ -91,4 +93,48 @@
 .linkBack:hover {
     cursor: pointer;
     border-bottom: 1px solid black;
+}
+
+.hide-pass-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.hide-pass-btn svg:hover {
+    cursor: pointer;
+    fill: black;
+}
+
+.hide-pass-btn svg {
+    width: 1.5rem;
+    fill: gray;
+}
+
+.password-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.password-wrap input {
+    margin: 0.6rem 1rem;
+    padding: 0.5rem;
+    transition: 0.2s;
+    height: 1.4rem;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.password-wrap input:hover {
+    border-radius: 0.2rem;
+    border: 1px solid rgb(13, 174, 13);
+    max-height: 1.4rem;
+}
+
+.password-wrap input:focus {
+    border-radius: 0.5rem;
+    border: 2px solid rgb(13, 174, 13);
+    max-height: 1.4rem;
 }

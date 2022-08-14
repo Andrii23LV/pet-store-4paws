@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import {Route, Routes} from 'react-router-dom'
 import {MainPage} from './pages/MainPage/MainPage'
 import {AboutPage} from './pages/AboutPage/AboutPage'
@@ -18,7 +19,7 @@ function App() {
         <Route path="/orders" element={ <OrderPage /> } />
         <Route path="/account" element={ <AuthPage /> } />
         <Route path="/account/registration" element={ <RegistrationForm /> } />
-          <Route path="/account/authorization" element={ <LogInForm /> } />
+          <Route path="/account/login" element={ <LogInForm /> } />
       </Routes>
       <Footer />
     </>

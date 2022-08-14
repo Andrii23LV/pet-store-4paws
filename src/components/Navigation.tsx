@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Link} from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 import '../styles/navigation.css';
 import logo from '../styles/images/logo.png';
 import { useSelector } from "react-redux";
@@ -8,6 +8,7 @@ export function Navigation() {
   const { username, isLogged } = useSelector((state: any = {}) => state.username);
   const { collarSum } = useSelector((state: any = {}) => state.collarSum);
   const [color, setColor] = useState(false);
+  
   const changeColor = () => {
     window.scrollY >= 60 ? setColor(true) : setColor(true);
   }
@@ -21,10 +22,10 @@ export function Navigation() {
         <h2 className="nav-text">FourPaws</h2>
       </div>
       <span className='nav-elements'>
-        <Link to="/" className="nav-element">Products</Link>
-        <Link to="/about" className="nav-element">About us</Link>
-        <Link to="/orders" className="nav-element">Orders{collarSum > 0 ? <span id='orders-num'>{collarSum}</span> : ''}</Link>
-        <Link to="/account" className="nav-element">{isLogged ? username : 'Account'}</Link>
+        <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>Products</NavLink>
+        <NavLink to="/about" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>About us</NavLink>
+        <NavLink to="/orders" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>Orders{collarSum > 0 ? <span id='orders-num'>{collarSum}</span> : ''}</NavLink>
+        <NavLink to="/account" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>{isLogged ? username : 'Account'}</NavLink>
       </span>
     </nav>
   )

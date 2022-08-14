@@ -17,3 +17,4 @@ export const newUserApi = async (data:any = {}) => {
         console.log(e.response.data)
     }
 } 
+

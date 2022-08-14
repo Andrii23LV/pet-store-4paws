@@ -4,21 +4,37 @@ import { getOrder }  from '../pages/OrderPage/ordersApi';
 import zoomImg from '../styles/images/zoom.png';
 
 export function FindOrder() {
-    const [orderTime, setOrderTime] = useState();
-    const [orderStatus, setOrderStatus] = useState();
-    const [orderQuantity, setOrderQuantity] = useState();
+    const [orderTime, setOrderTime] = useState('');
+    const [orderStatus, setOrderStatus] = useState('');
+    const [orderQuantity, setOrderQuantity] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [value, setValue] = useState(''); 
+    const [ incorrectOrder , setIncorrectOrder] = useState({
+        status: false,
+        text: ''
+    });
 
     const  handleSearch = async () => {
         setIsLoading(true);
-        const data = await getOrder(value);
-        console.log('get')
-        setOrderTime(data.shipDate)
-        setOrderStatus(data.status)
-        setOrderQuantity(data.quantity)
-        console.log(data);
-        setIsLoading(false);
+        const response = await getOrder(value);
+        console.log(response)
+        console.log(response.status)
+        if(response.status === 404) {
+            setIsLoading(false);
+            setOrderTime('');
+            setOrderStatus('');
+            setOrderQuantity('');
+            setIncorrectOrder(prev => {
+                return { text: 'Order not found', status: true }
+            }) 
+        } else {
+            setOrderTime(response.data.shipDate)
+            setOrderStatus(response.data.status)
+            setOrderQuantity(response.data.quantity)
+            setIsLoading(false);
+            setIncorrectOrder(prev => {return {...prev, status: false}});
+            setValue('');
+        }
         setValue('');
     }
 
@@ -34,6 +50,7 @@ export function FindOrder() {
                 <button onClick={ handleSearch }>Search</button>
             </div>
             {isLoading && <p className='loader'>Loading...</p>}
+            { incorrectOrder.status && <p className='loader'>Order not found</p>}
             <div className='order-info'>
                 <div>
                     <p>Quantity: <span>{orderQuantity}</span></p>

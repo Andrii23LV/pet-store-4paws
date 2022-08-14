@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.127);
     border-bottom: 0.1rem solid rgba(0, 0, 0);
     position: fixed;
     left: 0;
@@ -74,11 +74,9 @@
     font-weight: 600;
     letter-spacing: 0.2rem;
     font-size: 0.8rem;
-}
-
-.nav-element:nth-child(3) {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .nav-element:hover {
@@ -93,4 +91,18 @@
     padding-left: 0.4rem;
     margin-left: 0.25rem;
     font-size: 0.6rem;
+}
+
+.nav-element-active {
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 0 0.5rem;
+    margin: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    color: rgb(42, 165, 21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

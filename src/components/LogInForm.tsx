@@ -12,29 +12,42 @@ import { useDispatch } from "react-redux";
 
 import { SET_USER } from "../redux/setCurrentUser";
 import { SET_PET_ID } from "../redux/setCurrentUser";
+import { useNavigate } from 'react-router-dom';
 
 export function LogInForm() {
-  const [ isSuccessfull, setIsSuccessfull ] = useState(false)
+  const [ isSuccessfull, setIsSuccessfull ] = useState(false);
+  const [ incorrectUser, setIncorrectUser ] = useState(false);
+  const [ incorrectPass, setIncorrectPass ] = useState(false);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const onSubmit = (data:any = {}) => {
-    console.log('login');
-    setIsSuccessfull(true);
-    loginApi(data);
-    findUserApi(data.username)
-    setTimeout(() => {
-      setIsSuccessfull(false);
-    }, 2000)
+  const onSubmit = async (data:any = {}) => {
+    const response = await findUserApi(data.username);
+    if(response.status === 404){
+      setIncorrectUser(true);
+    } else {
+      if( data.password != response.data.password ){
+        return setIncorrectPass(true);
+      }
+      setTimeout(() => {
+        setIsSuccessfull(false);
+        navigate('/', {replace: true});
+      }, 2000)
+      setIsSuccessfull(true);
+      setIsSuccessfull(true);
+      setIncorrectUser(false);
+      setIncorrectPass(false);
+    }
   }
-
   const findUserApi = async (data: string) => {
     try {
         const response = await axios.get(`https://petstore3.swagger.io/api/v3/user/${data}`)
-        console.log(response.data);
-        console.log(dispatch(SET_USER(response.data)));
+        dispatch(SET_USER(response.data));
         dispatch(SET_PET_ID(randomPetId()));
-        return response.data;
-    } catch (e) {
-        console.log(e);
+        console.log(response.data);
+        return response;
+    }catch (error:any) {
+        console.log(error.response);
+        return error.response;
     }
   }
 
@@ -48,10 +61,15 @@ export function LogInForm() {
                     <input type="text" placeholder='Username'
                     {...register('username', {required: true, minLength:3, maxLength:15})}>
                     </input>
+                    {errors?.username && {type: "required"} && <span className='error-auth'>*Username is required</span>}
                     <input type="text" placeholder='Password'
-                    {...register('password', {required: true})}>
+                      {...register('password', {required: true})}>
                     </input>
+                    {errors?.password && {type: "required"} && <span className='error-auth'>*Password is required</span>}
+                    {errors?.password && {type: "pattern"} && <span className='error-auth'>*Should contain one uppercase and lowercase, one number</span>}
                     <Link to="/account/registration" className='registration-link'>Don`t have an account?</Link>
+                    {incorrectUser && <p className='log-error'>User not found</p>}
+                    {incorrectPass && <p className='log-error'>Incorrect password</p>}
                     <button>log into the account</button>
                 </form>
             </div>
