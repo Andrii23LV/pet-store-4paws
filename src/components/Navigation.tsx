@@ -10,7 +10,7 @@ export function Navigation() {
   const [color, setColor] = useState(false);
   
   const changeColor = () => {
-    window.scrollY >= 60 ? setColor(true) : setColor(true);
+    window.scrollY >= 59 ? setColor(true) : setColor(true);
   }
 
   window.addEventListener('scroll', changeColor);
