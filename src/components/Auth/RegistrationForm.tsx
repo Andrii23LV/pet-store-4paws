@@ -11,7 +11,7 @@ export function RegistrationForm() {
     const { register, handleSubmit, formState: { errors }} = useForm();
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate('/pet-store-4paws/account/login', {replace: true});
+        navigate('/account/login', {replace: true});
     };
 
     const onSubmit = async (data:any = {}) => {
