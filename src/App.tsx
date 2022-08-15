@@ -14,7 +14,7 @@ function App() {
     <>
       <Navigation />
       <Routes>
-        <Route path="/" element={ <MainPage /> } />
+        <Route path="/pet-store-4paws/" element={ <MainPage /> } />
         <Route path="/about" element={ <AboutPage /> } />
         <Route path="/orders" element={ <OrderPage /> } />
         <Route path="/account" element={ <AuthPage /> } />

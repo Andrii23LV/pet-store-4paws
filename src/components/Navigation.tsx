@@ -22,7 +22,7 @@ export function Navigation() {
         <h2 className="nav-text">FourPaws</h2>
       </div>
       <span className='nav-elements'>
-        <NavLink to="/" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>Products</NavLink>
+        <NavLink to="/pet-store-4paws/" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>Products</NavLink>
         <NavLink to="/about" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>About us</NavLink>
         <NavLink to="/orders" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>Orders{collarSum > 0 ? <span id='orders-num'>{collarSum}</span> : ''}</NavLink>
         <NavLink to="/account" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>{isLogged ? username : 'Account'}</NavLink>
