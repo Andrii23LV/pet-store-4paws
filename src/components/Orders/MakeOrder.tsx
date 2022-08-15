@@ -18,14 +18,14 @@ export function MakeOrder() {
             <div className='order-description'>
               <img src={products[0].img} className='order-img'></img>
               <div>
-                <h3 className='card-title'>{ products[1].name }</h3>
-                <p className='card-text'>{ products[1].description }</p>
-                <p className='order-price-order'>{ products[1].price }$</p>
+                <h3 className='card-title'>{ products[0].name }</h3>
+                <p className='card-text'>{ products[0].description }</p>
+                <p className='order-price-order'>{ products[0].price }$</p>
               </div>
             </div>
               <div className='order-total'>
                 <p className='order-quantity'>х{ premiumQuantity }</p>
-                <p>{products[1].price * premiumQuantity}$</p>
+                <p>{products[0].price * premiumQuantity}$</p>
                 <button className='remove-order' onClick={ () => {dispatch(DECREMENT_PREMIUM())} }>remove</button>
               </div>
           </div>
