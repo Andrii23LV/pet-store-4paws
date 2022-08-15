@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 export function BackButton() {
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate('/pet-store-4paws/account', {replace: true});
+        navigate('/account', {replace: true});
       };
     return (
         <div>

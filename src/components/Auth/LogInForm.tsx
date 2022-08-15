@@ -29,7 +29,7 @@ export function LogInForm() {
       }
       setTimeout(() => {
         setIsSuccessfull(false);
-        navigate('/pet-store-4paws/products', {replace: true});
+        navigate('/', {replace: true});
       }, 2000)
       setIsSuccessfull(true);
       setIsSuccessfull(true);

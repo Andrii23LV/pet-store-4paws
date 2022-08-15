@@ -10,7 +10,7 @@ export function Navigation() {
   const [color, setColor] = useState(false);
   
   const changeColor = () => {
-    window.scrollY >= 59 ? setColor(true) : setColor(true);
+    window.scrollY >= 60 ? setColor(true) : setColor(true);
   }
 
   window.addEventListener('scroll', changeColor);
@@ -22,10 +22,10 @@ export function Navigation() {
         <h2 className="nav-text">FourPaws</h2>
       </div>
       <span className='nav-elements'>
-        <NavLink to="/pet-store-4paws/products" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>Products</NavLink>
-        <NavLink to="/pet-store-4paws/about" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>About us</NavLink>
-        <NavLink to="/pet-store-4paws/orders" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>Orders{collarSum > 0 ? <span id='orders-num'>{collarSum}</span> : ''}</NavLink>
-        <NavLink to="/pet-store-4paws/account" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>{isLogged ? username : 'Account'}</NavLink>
+        <NavLink to="/products" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>Products</NavLink>
+        <NavLink to="/about" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>About us</NavLink>
+        <NavLink to="/orders" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>Orders{collarSum > 0 ? <span id='orders-num'>{collarSum}</span> : ''}</NavLink>
+        <NavLink to="/account" className={({ isActive }) => (isActive ? 'nav-element-active' : 'nav-element')}>{isLogged ? username : 'Account'}</NavLink>
       </span>
     </nav>
   )
