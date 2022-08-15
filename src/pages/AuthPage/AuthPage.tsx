@@ -11,8 +11,8 @@ function AuthPage() {
     <>
       { !isLogged ?
         <section className='auth-links-to'>
-          <Link to="/account/registration" className='registration-link'>Registartion &#8599;</Link>
-          <Link to="/account/login" className='login-link'>Login &#8599;</Link> 
+          <Link to="/pet-store-4paws/account/registration" className='registration-link'>Registartion &#8599;</Link>
+          <Link to="/pet-store-4paws/account/login" className='login-link'>Login &#8599;</Link> 
         </section>
         : <UserAccount />}
     </>

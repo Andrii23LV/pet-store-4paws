@@ -14,12 +14,12 @@ function App() {
     <>
       <Navigation />
       <Routes>
-        <Route path="/" element={ <MainPage /> } />
-        <Route path="/about" element={ <AboutPage /> } />
-        <Route path="/orders" element={ <OrderPage /> } />
-        <Route path="/account" element={ <AuthPage /> } />
-        <Route path="/account/registration" element={ <RegistrationForm /> } />
-          <Route path="/account/login" element={ <LogInForm /> } />
+        <Route path="/pet-store-4paws" element={ <MainPage /> } />
+        <Route path="/pet-store-4paws/about" element={ <AboutPage /> } />
+        <Route path="/pet-store-4paws/orders" element={ <OrderPage /> } />
+        <Route path="/pet-store-4paws/account" element={ <AuthPage /> } />
+        <Route path="/pet-store-4paws/account/registration" element={ <RegistrationForm /> } />
+          <Route path="/pet-store-4paws/account/login" element={ <LogInForm /> } />
       </Routes>
       <Footer />
     </>
