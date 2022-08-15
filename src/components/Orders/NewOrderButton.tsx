@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
-import { postOrder } from '../pages/OrderPage/postOrder';
-import { ModalSuccess } from '../components/ModalSuccess'
+import { postOrder } from '../../pages/OrderPage/postOrder';
+import { ModalSuccess } from '../ModalSuccess'
 import { useState, useEffect } from 'react';
-import { RESET_ORDER } from '../redux/setOrders';
+import { RESET_ORDER } from '../../redux/setOrders';
 import { useDispatch } from 'react-redux';
 
 export const NewOrderButton = () => {

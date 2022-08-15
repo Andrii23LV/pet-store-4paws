@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { getOrder }  from '../pages/OrderPage/ordersApi';
-import zoomImg from '../styles/images/zoom.png';
+import { getOrder }  from '../../pages/OrderPage/ordersApi';
+import zoomImg from '../../styles/images/zoom.png';
 
 export function FindOrder() {
     const [orderTime, setOrderTime] = useState('');
@@ -17,8 +17,6 @@ export function FindOrder() {
     const  handleSearch = async () => {
         setIsLoading(true);
         const response = await getOrder(value);
-        console.log(response)
-        console.log(response.status)
         if(response.status === 404) {
             setIsLoading(false);
             setOrderTime('');

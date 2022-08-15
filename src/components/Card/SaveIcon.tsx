@@ -1,14 +1,12 @@
 import { useState } from 'react';
-import { PREMIUM_WISH, RAFFINE_WISH, SIMPLE_WISH } from '../redux/setWishList';
+import { PREMIUM_WISH, RAFFINE_WISH, SIMPLE_WISH } from '../../redux/setWishList';
 import { useDispatch } from "react-redux";
-import {  useSelector } from "react-redux";
 
 export function SaveIcon() {
     const [ colorRed, setColorRed ] = useState(true);
     const dispatch = useDispatch();
     const setWish = (e:any) => {
         let id = e.target.parentElement.parentElement.parentElement.id;
-        console.log(id)
         if (id == 1) {
             setColorRed(!colorRed);
             if(colorRed) {

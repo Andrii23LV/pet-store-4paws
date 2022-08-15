@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { newUserApi } from '../pages/AuthPage/newUserApi';
+import { newUserApi } from '../../pages/AuthPage/newUserApi';
 import { BackButton } from './BackButton'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -18,12 +18,13 @@ export function RegistrationForm() {
         const response = await findUserApi(data)
         if(response.status === 404) {
             setIncorrectUsername(true);
-        } else {
             newUserApi(data);
             setTimeout(() => {
                 handleClick()
             }, 1000)
             setIncorrectUsername(false);
+        } else {
+            setIncorrectUsername(true);
         }
     }
 

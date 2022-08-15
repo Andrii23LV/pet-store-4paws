@@ -1,13 +1,13 @@
 import {  useSelector } from "react-redux";
 import axios from 'axios';
-import '../pages/AuthPage/account.css'
-import logo from '../styles/images/user.svg';
-import products from '../products.json';
+import '../../pages/AuthPage/account.css'
+import logo from '../../styles/images/user.svg';
+import products from '../../products.json';
 
-import { LOGOUT } from '../redux/setCurrentUser';
+import { LOGOUT } from '../../redux/setCurrentUser';
 import { useDispatch } from "react-redux";
-import { PREMIUM_WISH, RAFFINE_WISH, SIMPLE_WISH } from '../redux/setWishList';
-import { INCREMENT_RAFFINE,  INCREMENT_PREMIUM, INCREMENT_SIMPLE} from '../redux/setOrders';
+import { PREMIUM_WISH, RAFFINE_WISH, SIMPLE_WISH } from '../../redux/setWishList';
+import { INCREMENT_RAFFINE,  INCREMENT_PREMIUM, INCREMENT_SIMPLE} from '../../redux/setOrders';
 
 
 export function UserAccount() {
@@ -19,8 +19,8 @@ export function UserAccount() {
         console.log(response.data);
         dispatch(LOGOUT());
         return response.data;
-    } catch (e) {
-        console.log(e);
+    } catch (err) {
+        console.log(err);
     }
 } 
 

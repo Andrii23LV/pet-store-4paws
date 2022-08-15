@@ -1,14 +1,13 @@
-import products from '../products.json'
-import '../pages/OrderPage/orderpage.css';
+import products from '../../products.json'
+import '../../pages/OrderPage/orderpage.css';
 import { useSelector } from "react-redux";
-import { DECREMENT_RAFFINE,  DECREMENT_PREMIUM, DECREMENT_SIMPLE} from '../redux/setOrders';
+import { DECREMENT_RAFFINE,  DECREMENT_PREMIUM, DECREMENT_SIMPLE} from '../../redux/setOrders';
 import { useDispatch } from "react-redux";
 import { NewOrderButton } from './NewOrderButton';
-import { IdMessage } from '../components/IdMessage'
+import { IdMessage } from './IdMessage'
 
 export function MakeOrder() {
   const { premiumQuantity, raffineQuantity, simpleQuantity, collarSum } = useSelector((state: any = {}) => state.premiumQuantity);
-  const { id } = useSelector((state: any = {}) => state.id);
 
   const dispatch = useDispatch();
   return (

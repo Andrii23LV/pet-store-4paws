@@ -10,7 +10,6 @@ export const postOrder = async (id:number, petId: number, collarSum:number) => {
         "status": "approved",
         "complete": true
         })
-        console.log(response.data);
     } 
     catch (e: unknown) {
         console.log(e)

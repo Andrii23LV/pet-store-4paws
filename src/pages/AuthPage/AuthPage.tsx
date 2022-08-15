@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import './authorization.css';  
 import './registration.css';  
 import './login.css';  
-import { UserAccount } from '../../components/UserAccount'
+import { UserAccount } from '../../components/Auth/UserAccount'
 
 function AuthPage() {
   const { isLogged } = useSelector((state: any = {}) => state.id);

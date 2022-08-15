@@ -1,17 +1,16 @@
-import '../pages/AuthPage/login.css'
+import '../../pages/AuthPage/login.css'
 import {Link} from 'react-router-dom'
 import { BackButton } from './BackButton'
 import axios from 'axios';
-import { loginApi } from '../pages/AuthPage/loginApi'
-import { ModalSuccess } from '../components/ModalSuccess'
-import { randomPetId }from '../features/randomPetId'
+import { ModalSuccess } from '../ModalSuccess'
+import { randomPetId }from '../../features/randomPetId'
 
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useDispatch } from "react-redux";
 
-import { SET_USER } from "../redux/setCurrentUser";
-import { SET_PET_ID } from "../redux/setCurrentUser";
+import { SET_USER } from "../../redux/setCurrentUser";
+import { SET_PET_ID } from "../../redux/setCurrentUser";
 import { useNavigate } from 'react-router-dom';
 
 export function LogInForm() {
@@ -43,7 +42,6 @@ export function LogInForm() {
         const response = await axios.get(`https://petstore3.swagger.io/api/v3/user/${data}`)
         dispatch(SET_USER(response.data));
         dispatch(SET_PET_ID(randomPetId()));
-        console.log(response.data);
         return response;
     }catch (error:any) {
         console.log(error.response);

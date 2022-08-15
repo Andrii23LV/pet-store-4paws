@@ -1,4 +1,4 @@
-import products from '../products.json'
+import products from '../../products.json'
 import AddToCartButton from './AddToCartButton'
 import { SaveIcon } from './SaveIcon'
 export function Products() {

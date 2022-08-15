@@ -11,7 +11,6 @@ export const newUserApi = async (data:any = {}) => {
         "phone": data.phone,
         "userStatus": 1
         })
-        console.log(response.data);
     } 
     catch (e:any) {
         console.log(e.response.data)

@@ -1,4 +1,4 @@
-import { INCREMENT_RAFFINE,  INCREMENT_PREMIUM, INCREMENT_SIMPLE} from '../redux/setOrders';
+import { INCREMENT_RAFFINE,  INCREMENT_PREMIUM, INCREMENT_SIMPLE} from '../../redux/setOrders';
 import { useDispatch } from "react-redux";
 
 function AddToCartButton() {
